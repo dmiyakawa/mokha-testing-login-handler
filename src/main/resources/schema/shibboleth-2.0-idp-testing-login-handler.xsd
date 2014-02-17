@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xsd:schema xmlns="http://www.mokha.co.jp/2014/shibboleth/idp"
+            targetNamespace="http://www.mokha.co.jp/2014/shibboleth/idp"
+            xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+            xmlns:ph="urn:mace:shibboleth:2.0:idp:profile-handler"
+            elementFormDefault="qualified">
+  <xsd:import namespace="urn:mace:shibboleth:2.0:idp:profile-handler"
+              schemaLocation="classpath:/schema/shibboleth-2.0-idp-profile-handler.xsd" />
+
+  <xsd:complexType name="TestingAuth">
+    <xsd:complexContent>
+      <xsd:extension base="ph:LoginHandlerType">
+        <xsd:attribute name="authenticationServletURL" type="xsd:string">
+          <xsd:annotation>
+            <xsd:documentation>
+              The servlet context path to the jp.co.mokha.shibboleth.idp.TestingAuthLoginServlet
+              that will authenticate the user.
+            </xsd:documentation>
+          </xsd:annotation>
+        </xsd:attribute>
+      </xsd:extension>
+    </xsd:complexContent>
+  </xsd:complexType>
+</xsd:schema>
