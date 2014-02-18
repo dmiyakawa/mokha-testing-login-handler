@@ -14,8 +14,8 @@
     <div class="wrapper">
       <div class="container">
         <header>
-          <a class="logo" href="../images/dummylogo.png">
-            <img src="<%= request.getContextPath()%>/images/mokha.png"
+          <a class="logo" href="../images/testing.png">
+            <img src="<%= request.getContextPath()%>/images/testing.png"
                  alt="Example image"/>
           </a>
         </header>
